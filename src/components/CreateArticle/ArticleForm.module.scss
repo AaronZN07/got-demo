@@ -1,0 +1,92 @@
+@import '/src/assets/scss/base/variables';
+@import '/src/assets/scss/base/utilities';
+.article_form {
+	@apply mt-5;
+	@apply flex;
+	@apply flex-col;
+	@apply gap-5;
+	@apply items-center;
+
+	input[type='text'],
+	input[type='email'],
+	input[type='tel'],
+	textarea {
+		@apply w-full;
+		@apply border-2;
+		@apply p-3;
+		@apply border-black;
+
+		&:focus {
+			outline: none;
+			@apply border-2;
+			border-color: $secondary;
+		}
+	}
+
+	.input_error {
+		border-color: $danger !important;
+	}
+
+	.tag_submit {
+		@apply mx-auto;
+	}
+
+	.section_form {
+		@apply my-2;
+		@apply w-full;
+		@apply max-w-7xl;
+
+		.section_content {
+			@apply border;
+			@apply border-black;
+			@apply p-2;
+			@apply flex;
+			@apply flex-col;
+			@apply gap-7;
+		}
+	}
+
+	.buttons_wrapper {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+		@apply justify-center;
+		@apply gap-5;
+		color: $secondary;
+		@apply w-full;
+		@apply text-lg;
+		@apply font-bold;
+
+		@apply sm:flex-row;
+
+		.button {
+			@apply gap-5;
+			@apply flex;
+			@apply items-center;
+			@apply justify-center;
+			@apply w-full;
+			@apply px-2;
+			@apply py-5;
+			@apply rounded-full;
+			background-color: $primary;
+		}
+	}
+}
+
+.buttonSave {
+	@apply cursor-default;
+	color: rgba($color: #fff, $alpha: 0.5);
+	background-color: rgba($color: $primary, $alpha: 0.7) !important;
+}
+
+.metadata {
+	@apply w-full;
+	@apply max-w-7xl;
+	@apply mx-auto;
+
+	&_fields {
+		@apply border;
+		@apply border-black;
+		@apply p-2;
+	}
+}

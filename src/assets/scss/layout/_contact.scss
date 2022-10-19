@@ -1,0 +1,52 @@
+.contact-info {
+	@apply py-20;
+	background-color: $secondary;
+	@apply text-white;
+
+	.container {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-10;
+		@apply mt-5;
+
+		@apply sm:grid-cols-3;
+		@apply sm:gap-0;
+	}
+
+	.info-container {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+
+		h2 {
+			@apply uppercase;
+			@apply mt-5;
+		}
+		p {
+			span {
+				@apply font-bold;
+				@apply block;
+			}
+			text-align: center;
+			max-width: 15rem;
+		}
+	}
+
+	.fa-layers {
+		.fa-back {
+			path {
+				fill: lighten($color: $secondary, $amount: 20%);
+			}
+		}
+	}
+
+	.fa-layers,
+	svg {
+		@apply w-24;
+		@apply h-24;
+	}
+}
+
+.contact-form {
+	@apply py-20;
+}

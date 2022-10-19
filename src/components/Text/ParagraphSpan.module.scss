@@ -1,0 +1,8 @@
+.ParagrapghSpan {
+	@apply text-center;
+	@apply font-bold;
+	span {
+		@apply font-normal;
+		@apply block;
+	}
+}

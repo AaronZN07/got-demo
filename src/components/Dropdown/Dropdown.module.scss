@@ -1,0 +1,28 @@
+@import '/src/assets/scss/base/variables';
+
+.dropdown {
+	@apply flex;
+	@apply flex-col;
+	@apply justify-center;
+	@apply items-start;
+	@apply gap-4;
+	@apply py-2;
+
+	.menu_item {
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+		@apply gap-5;
+		@apply px-4;
+		@apply py-2;
+		@apply rounded-lg;
+		@apply w-fit;
+
+		&:hover {
+			& > li {
+				color: $secondary;
+			}
+			background-color: rgba($secondary, 0.1);
+		}
+	}
+}

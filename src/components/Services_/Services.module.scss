@@ -1,0 +1,75 @@
+@import '/src/assets/scss/base/variables';
+
+.services_container {
+	@apply grid;
+	@apply grid-cols-4;
+	@apply gap-10;
+	@apply lg:gap-20;
+}
+
+.services_tabs {
+	@apply flex;
+	@apply flex-col;
+	@apply gap-6;
+	@apply col-span-4;
+	@apply md:col-span-1;
+}
+
+.tab {
+	background-color: #fff;
+	color: $primary;
+	@apply select-none;
+	@apply py-4;
+	@apply shadow-md;
+	@apply rounded-md;
+	@apply uppercase;
+	@apply font-bold;
+	@apply flex;
+	@apply justify-center;
+	@apply items-center;
+	@apply gap-2;
+	@apply text-sm;
+	@apply relative;
+}
+
+.active {
+	background-color: $primary;
+	@apply text-white;
+
+	&::before {
+		@media (min-width: 768px) {
+			content: '';
+			display: block;
+			border-top: 8px solid transparent;
+			border-left: 10px solid $primary;
+			border-bottom: 8px solid transparent;
+			position: absolute;
+			top: 50%;
+			right: -10px;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.services_content {
+	@apply col-span-4;
+	@apply md:col-span-3;
+	@apply shadow-lg;
+	@apply rounded-lg;
+	@apply p-10;
+	transition: opacity 200ms ease-in-out;
+	opacity: 0;
+}
+
+.fade {
+	animation: fade 1s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

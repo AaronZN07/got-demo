@@ -1,0 +1,26 @@
+@import '/src/assets/scss/base/variables';
+.button {
+	@apply py-2;
+	@apply px-4;
+	@apply text-white;
+	@apply rounded-full;
+	@apply w-full;
+}
+
+.button_danger {
+	background-color: $danger;
+}
+
+.button_success {
+	background-color: $succes;
+}
+
+.button_info {
+	background-color: $info;
+	@apply col-span-2;
+}
+
+.button_warning {
+	@apply col-span-2;
+	background-color: $warning;
+}

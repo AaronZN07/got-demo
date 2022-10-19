@@ -1,0 +1,13 @@
+.blog_admin {
+	.blog_admin-table {
+		@apply py-10;
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-10;
+	}
+}
+
+.pagination_blog_admin {
+	@apply mb-5;
+	@apply mx-auto;
+}

@@ -1,0 +1,32 @@
+.card_blog {
+	@apply bg-white;
+	@apply p-10;
+	@apply shadow-lg;
+
+	.card_blog-body {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+		@apply gap-20;
+
+		@apply md:gap-10;
+		@apply xl:gap-20;
+		@apply lg:flex-row;
+
+		.card_image {
+			@apply rounded-xl;
+			img {
+				@apply rounded-xl;
+				@apply max-h-40;
+			}
+		}
+
+		.card_control {
+			@apply grid;
+			@apply grid-cols-1;
+			@apply gap-5;
+
+			@apply md:grid-cols-3;
+		}
+	}
+}

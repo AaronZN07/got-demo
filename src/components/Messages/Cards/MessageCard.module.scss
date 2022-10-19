@@ -1,0 +1,106 @@
+@import '/src/assets/scss/base/variables';
+@import '/src/assets/scss/base/utilities';
+.message_card {
+	@apply bg-white;
+	@apply rounded-lg;
+	@apply shadow-lg;
+	@apply relative;
+	@apply p-5;
+	.unread {
+		animation: myAnim 4s ease-in-out 0s infinite normal forwards;
+		@apply absolute;
+		@apply -top-5;
+		@apply -left-5;
+		@apply w-10;
+		@apply h-10;
+		@apply rounded-full;
+		@apply flex;
+		@apply items-center;
+		@apply justify-center;
+		@apply text-white;
+		background-color: $danger;
+	}
+
+	.card_header {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+		@apply gap-5;
+		@apply relative;
+		@apply cursor-pointer;
+		@apply select-none;
+		@apply border-b-2;
+		@apply pb-5;
+		@apply md:flex-row;
+
+		.card_id {
+			@apply py-5;
+			@apply px-5;
+			@apply rounded-full;
+			color: $details2;
+			background-color: $primary;
+		}
+
+		.card_info {
+			p {
+				@apply font-bold;
+				span {
+					@apply font-normal;
+				}
+			}
+		}
+
+		.open {
+			@apply float-right;
+			@apply text-6xl;
+			@apply md:absolute;
+			@apply md:right-20;
+
+			svg {
+				@apply w-auto;
+				@apply transition-all;
+			}
+		}
+	}
+	.card_body {
+		@apply scroll_minimalist;
+		@apply max-h-0;
+		@apply transition-all;
+		@apply flex-col;
+		@apply gap-5;
+	}
+
+	.card_body-open {
+		@apply mt-5;
+		@apply flex;
+		@apply max-h-52;
+	}
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}

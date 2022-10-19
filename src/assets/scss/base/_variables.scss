@@ -1,0 +1,22 @@
+//Font
+@font-face {
+	font-family: 'Futurali';
+	src: local('Futurali'),
+		url('/src/assets/font/Futurali.ttf') format('truetype');
+}
+
+$font-family: Futurali, sans-serif;
+
+//Colors
+$primary: #1e3456;
+$secondary: #15a1db;
+$details1: #37ae7d;
+$details2: #f9d924;
+
+$white: #fff;
+$dark: #000;
+
+$succes: #0bb666;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;

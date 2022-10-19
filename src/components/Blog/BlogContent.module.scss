@@ -1,0 +1,14 @@
+.blog_content {
+	@apply col-span-1;
+
+	@apply lg:col-span-2;
+
+	& > div {
+		@apply my-10;
+	}
+
+	.pagination_blog {
+		@apply my-10;
+		@apply mx-auto;
+	}
+}

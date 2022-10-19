@@ -1,0 +1,33 @@
+@import '/src/assets/scss/base/variables';
+.simple-botton {
+	@apply cursor-pointer;
+	&[type='number'] {
+		@apply shadow-md;
+		border: 1px solid $white;
+		background-color: $white;
+	}
+
+	@apply max-w-full;
+	text-transform: uppercase;
+	@apply py-3;
+	@apply px-8;
+	border: 2px solid $primary;
+
+	&-dark {
+		color: $white !important;
+		background-color: $primary !important;
+	}
+
+	&-white {
+		color: $dark !important;
+		background-color: $white !important;
+	}
+
+	&-padding {
+		padding: 0.5rem 1.7rem;
+	}
+
+	&-center {
+		margin: 1rem auto 0;
+	}
+}

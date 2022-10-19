@@ -1,0 +1,45 @@
+@import '/src/assets/scss/base/utilities';
+
+.breadcrumb {
+	@apply py-12;
+	@apply bg-image;
+	@apply bg-image-breadcrumb;
+	@apply text-white;
+	@apply md:py-16;
+
+	.breadcrumb_container {
+		@apply container;
+		@apply mx-auto;
+		@apply pr-3;
+		@apply pl-3;
+
+		@apply sm:pr-0;
+		@apply sm:pl-0;
+	}
+
+	.title {
+		@apply uppercase;
+		@apply text-3xl;
+
+		@apply md:text-5xl;
+	}
+
+	.breadcrumb_bar {
+		@apply mt-5;
+
+		.before_page {
+			&::before {
+				content: ' / ';
+				color: darken($color: #fff, $amount: 40%);
+			}
+		}
+
+		.actual_page {
+			&::before {
+				content: ' / ';
+			}
+
+			color: darken($color: #fff, $amount: 40%);
+		}
+	}
+}

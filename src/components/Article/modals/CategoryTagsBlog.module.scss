@@ -1,0 +1,86 @@
+@import '/src/assets/scss/base/variables';
+@import '/src/assets/scss/base/utilities';
+.modal_categories {
+	.categories {
+		@apply border;
+		@apply rounded-md;
+		@apply my-5;
+		@apply max-h-56;
+		@apply overflow-y-auto;
+		@apply no_scroll;
+		@apply text-start;
+
+		.row {
+			@apply cursor-pointer;
+			@apply p-5;
+		}
+
+		.row_selected {
+			background-color: $primary;
+			@apply text-white;
+		}
+	}
+
+	.actions {
+		@apply grid;
+		@apply grid-cols-2;
+		@apply gap-5;
+
+		.button_active_edit {
+			button {
+				@apply cursor-pointer;
+				background-color: $warning;
+			}
+		}
+
+		.button_active_delete {
+			button {
+				@apply cursor-pointer;
+				background-color: $danger;
+			}
+		}
+
+		.button_delete {
+			@apply cursor-default;
+			background-color: lighten($color: $danger, $amount: 20%);
+		}
+
+		.button_edit {
+			@apply cursor-default;
+			background-color: lighten($color: $warning, $amount: 20%);
+		}
+	}
+}
+
+.container {
+	@apply mt-5;
+
+	.color {
+		@apply my-5;
+	}
+
+	.actions {
+		@apply mt-2;
+		@apply flex;
+		@apply flex-col;
+		.button_back {
+			@apply w-full;
+			background-color: $warning;
+		}
+	}
+
+	input[type='text'] {
+		@apply w-full;
+		@apply px-3;
+		@apply py-2;
+		@apply border;
+	}
+}
+
+.button_add {
+	@apply col-span-2;
+	button {
+		@apply w-full;
+		background-color: $succes;
+	}
+}

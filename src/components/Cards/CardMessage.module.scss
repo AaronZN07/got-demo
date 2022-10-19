@@ -1,0 +1,13 @@
+.message {
+	@apply grid;
+	grid-template-columns: 2.6rem auto;
+	@apply gap-4;
+	@apply mb-4;
+	@apply transition-all;
+	@apply select-none;
+	@apply rounded-lg;
+
+	&:hover {
+		@apply bg-gray-100;
+	}
+}

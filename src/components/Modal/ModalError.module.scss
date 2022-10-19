@@ -1,0 +1,11 @@
+@import '/src/assets/scss/base/variables';
+.error_modal {
+	@apply text-center;
+	.hero_error {
+		background-color: $danger;
+	}
+
+	.button_error {
+		background-color: $warning;
+	}
+}

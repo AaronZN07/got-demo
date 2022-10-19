@@ -1,0 +1,58 @@
+@import '/src/assets/scss/base/variables';
+.share_modal {
+	h2 {
+		@apply text-center;
+	}
+
+	.social_links {
+		@apply flex;
+		@apply items-center;
+		@apply justify-center;
+		@apply gap-5;
+		@apply my-5;
+
+		a {
+			@apply bg-slate-100;
+			@apply px-3;
+			@apply py-2;
+			@apply rounded-full;
+			@apply text-xl;
+		}
+
+		.wp {
+			@apply bg-green-200;
+			@apply text-green-500;
+		}
+
+		.fb {
+			@apply bg-blue-200;
+			@apply text-blue-500;
+		}
+
+		.tw {
+			@apply bg-blue-200;
+			@apply text-blue-500;
+		}
+	}
+
+	.copy {
+		@apply flex;
+		@apply rounded-md;
+		@apply p-1;
+		@apply bg-gray-100;
+		@apply justify-between;
+		input {
+			@apply bg-transparent;
+			@apply w-10/12;
+
+			&:focus {
+				@apply outline-none;
+			}
+		}
+
+		span {
+			@apply text-sm;
+			color: $secondary;
+		}
+	}
+}

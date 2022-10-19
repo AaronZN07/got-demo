@@ -1,0 +1,65 @@
+.card_icon_text {
+	@apply flex;
+	@apply flex-col;
+	@apply justify-center;
+	@apply px-6;
+	@apply py-2;
+	@apply gap-2;
+	@apply shadow-lg;
+	@apply items-center;
+	@apply border;
+	@apply bg-white;
+	@apply cursor-pointer;
+	@apply select-none;
+	@apply transition-all;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+
+	.icon {
+		@apply m-1;
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+		@apply border;
+		@apply rounded-full;
+		@apply p-3;
+	}
+}
+
+.green {
+	.icon {
+		@apply bg-green-400;
+		svg path {
+			fill: white;
+		}
+	}
+}
+
+.yellow {
+	.icon {
+		@apply bg-yellow-400;
+		svg path {
+			fill: white;
+		}
+	}
+}
+
+.red {
+	.icon {
+		@apply bg-red-400;
+		svg path {
+			fill: white;
+		}
+	}
+}
+
+.blue {
+	.icon {
+		@apply bg-blue-400;
+		svg path {
+			fill: white;
+		}
+	}
+}

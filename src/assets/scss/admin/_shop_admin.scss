@@ -1,0 +1,13 @@
+.shop_admin {
+	.shop_admin-table {
+		@apply py-10;
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-0;
+
+		@apply lg:grid-cols-4;
+
+		@apply md:gap-5;
+		@apply xl:grid-cols-5;
+	}
+}

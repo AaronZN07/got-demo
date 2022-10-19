@@ -1,0 +1,23 @@
+.wwd {
+	@apply bg-image;
+	@apply bg-image-pets;
+	@apply py-20;
+
+	.container {
+		@apply my-5;
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-10;
+
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+
+		@apply md:grid-cols-3;
+	}
+
+	a {
+		@apply col-span-1;
+		@apply md:col-span-3;
+		text-align: center;
+	}
+}

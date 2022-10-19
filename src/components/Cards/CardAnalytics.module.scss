@@ -1,0 +1,64 @@
+.card_analytics {
+	--color: blue;
+	--darkenColor: blue;
+	@apply bg-white;
+	@apply shadow-lg;
+	@apply rounded-xl;
+
+	.card_header {
+		@apply px-5;
+		@apply pt-2;
+		@apply flex;
+		@apply justify-between;
+
+		.header_icon {
+			@apply text-white;
+			@apply text-9xl;
+			@apply flex;
+			@apply justify-center;
+			@apply items-center;
+			@apply rounded-2xl;
+			background: linear-gradient(195deg, var(--color), var(--darkenColor));
+			@apply -mt-7;
+			@apply h-16;
+			@apply w-16;
+		}
+
+		.header_stats {
+			@apply text-right;
+			@apply font-bold;
+
+			h3 {
+				@apply font-normal;
+			}
+		}
+	}
+
+	.divition {
+		border-top: 0px solid rgba(0, 0, 0, 0.15);
+		border-right: 0px solid rgba(0, 0, 0, 0.15);
+		border-left: 0px solid rgba(0, 0, 0, 0.15);
+		height: 0.0925rem;
+		margin: 1rem 0px;
+		border-bottom: none;
+		opacity: 0.25;
+		background-image: linear-gradient(
+			to right,
+			rgba(52, 71, 103, 0),
+			rgba(52, 71, 103, 0.4),
+			rgba(52, 71, 103, 0)
+		) !important;
+	}
+
+	.card_footer {
+		@apply px-5;
+		@apply pb-2;
+
+		p {
+			@apply text-sm;
+			span {
+				@apply font-bold;
+			}
+		}
+	}
+}

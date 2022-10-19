@@ -1,0 +1,87 @@
+@import '/src/assets/scss/base/variables';
+.checkoption {
+	@apply py-3;
+	@apply px-6;
+	@apply flex;
+	@apply items-center;
+	@apply gap-5;
+	@apply cursor-pointer;
+
+	&:hover {
+		background-color: lighten($color: $primary, $amount: 05%);
+	}
+
+	.hidden_check {
+		@apply hidden;
+	}
+
+	.checkbox {
+		.cbx_styled {
+			@apply relative;
+			@apply mx-auto;
+			@apply my-auto;
+			@apply w-7;
+			@apply h-7;
+			border: 1px solid $secondary;
+			@apply rounded-md;
+			@apply transition-all;
+			@apply cursor-pointer;
+			@apply block;
+
+			&::after {
+				content: '';
+				@apply absolute;
+				top: 4px;
+				left: 10px;
+				width: 7px;
+				height: 14px;
+				opacity: 0;
+				transform: rotate(45deg) scale(0);
+				border-right: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				transition: all 0.3s ease;
+				transition-delay: 0.15s;
+			}
+		}
+	}
+
+	.hidden_check:checked ~ .cbx_styled {
+		background-color: $secondary;
+		animation: Jello 0.7s ease 0s 1 normal both;
+
+		&::after {
+			@apply opacity-100;
+			transform: rotate(45deg) scale(1);
+		}
+	}
+}
+
+@keyframes Jello {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}

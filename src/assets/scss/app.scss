@@ -1,0 +1,29 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'base/variables';
+@import 'base/tailwind';
+@import 'base/global';
+@import 'base/utilities';
+@import 'layout/header';
+@import 'layout/wwd';
+@import 'layout/get_appintment';
+@import 'layout/services';
+@import 'layout/shop';
+@import 'layout/testimonials';
+@import 'layout/blog';
+@import 'layout/about';
+@import 'layout/contact';
+@import 'layout/cart';
+@import 'layout/footer';
+@import 'layout/error';
+
+@import 'client/userTemplate';
+@import 'client/login';
+
+@import 'admin/admin_template';
+@import 'admin/dashboard';
+@import 'admin/blog_admin';
+@import 'admin/tag_admin';
+@import 'admin/shop_admin';

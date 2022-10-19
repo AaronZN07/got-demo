@@ -1,0 +1,121 @@
+@import './variables';
+
+.bg-image {
+	position: relative;
+	height: auto;
+	width: 100%;
+}
+
+.bg-image-pets::before {
+	content: '';
+	background-image: url(/src/assets/img/bg-images/background-pets.jpg);
+	background-size: auto;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	opacity: 0.15;
+	z-index: -999;
+}
+
+.bg-image-dogs::before {
+	content: '';
+	background-image: url(/src/assets/img/bg-images/background-dog.jpg);
+	background-size: auto;
+	background-position: center top;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	filter: brightness(50%);
+	z-index: -1;
+}
+
+.bg-image-cats::before {
+	content: '';
+	background-image: url(/src/assets/img/bg-images/background-cat.jpg);
+	background-size: auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	filter: brightness(50%);
+	z-index: -1;
+}
+
+.bg-image-breadcrumb::before {
+	content: '';
+	background-image: url(/src/assets/img/bg-images/banner.jpg);
+	background-size: auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	filter: brightness(50%);
+	z-index: -1;
+}
+
+.bg-image-lines::before {
+	content: '';
+	background-color: #ffffff;
+	background: radial-gradient(
+			circle at bottom left,
+			transparent 25%,
+			#c7c7c7 25.5%,
+			#c7c7c7 36%,
+			transparent 37%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at top right,
+			transparent 34%,
+			#c7c7c7 34.5%,
+			#c7c7c7 45.5%,
+			transparent 46%,
+			transparent 100%
+		);
+	background-size: 6em 6em;
+	background-color: #ffffff;
+	opacity: 0.1;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	filter: brightness(50%);
+	z-index: -1;
+}
+
+.price::before {
+	content: '₡';
+}
+
+.no_scroll {
+	&::-webkit-scrollbar {
+		width: 0px;
+	}
+}
+
+.scroll_minimalist {
+	@apply overflow-y-auto;
+	&::-webkit-scrollbar {
+		@apply w-2;
+		background: $primary;
+		@apply rounded-r-lg;
+		@apply rounded-l-lg;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $secondary;
+		@apply rounded-r-lg;
+		@apply rounded-l-lg;
+	}
+}

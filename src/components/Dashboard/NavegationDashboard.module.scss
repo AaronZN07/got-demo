@@ -1,0 +1,161 @@
+@import '/src/assets/scss/base/variables';
+
+.admin_aside {
+	@apply fixed;
+	@apply top-0;
+	@apply bottom-0;
+	@apply w-full;
+	@apply px-0;
+	transition: all 0.5s ease;
+	background-color: $white;
+	@apply z-50;
+
+	@apply lg:block;
+
+	&.admin_open {
+		max-width: 280px;
+		transform: translateX(0);
+
+		.aside_logo {
+			@apply block;
+		}
+		@media (min-width: 1024px) {
+			max-width: 280px;
+			transform: translateX(0);
+
+			.dropdown_icon {
+				@apply opacity-0;
+			}
+		}
+
+		.navitem_info {
+			@apply flex;
+		}
+	}
+
+	&.admin_close {
+		max-width: 64px;
+		transform: translateX(-999px);
+
+		&:hover {
+			max-width: 280px;
+			.aside_logo {
+				@apply block;
+			}
+
+			.navitem_info {
+				@apply opacity-100;
+			}
+
+			.dropdown_icon {
+				@apply opacity-0;
+			}
+		}
+
+		.navitem_info {
+			@apply opacity-0;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		transform: translateX(0) !important;
+	}
+}
+
+.aside_header {
+	@apply p-6;
+	@apply flex;
+	@apply items-center;
+	@apply justify-between;
+
+	.aside_logo {
+		@apply hidden;
+		@apply mx-auto;
+		img {
+			max-width: 6rem !important;
+		}
+	}
+
+	.aside_menu {
+		@apply hidden;
+		@apply text-2xl;
+
+		@apply lg:block;
+	}
+}
+
+.aside_nav {
+	@apply mt-5;
+	@apply select-none;
+	@apply transition-all;
+
+	ul {
+		@apply flex;
+		@apply flex-col;
+		@apply gap-5;
+	}
+
+	.navitem {
+		a {
+			@apply overflow-hidden;
+			@apply flex;
+			@apply items-center;
+			@apply gap-5;
+			@apply mx-2;
+			@apply whitespace-nowrap;
+			@apply px-4;
+			@apply py-2;
+			@apply rounded-md;
+
+			.icon {
+				max-width: 16px;
+			}
+
+			.navitem_info {
+				@apply flex;
+				@apply items-center;
+				@apply w-full;
+				@apply justify-between;
+				@apply transition-all;
+
+				h3 {
+					@apply font-normal;
+				}
+			}
+			&.active {
+				background-color: lighten($color: $secondary, $amount: 50%);
+				color: $secondary;
+			}
+		}
+	}
+
+	svg {
+		@apply transition-all;
+	}
+
+	.message_count {
+		@apply text-white;
+		background-color: $secondary;
+		@apply py-1;
+		@apply px-3;
+		@apply rounded-md;
+		@apply text-xs;
+	}
+}
+
+.nav_collapse {
+	ul {
+		@apply flex;
+		@apply flex-col;
+		@apply gap-1;
+
+		h3 {
+			@apply transition-all;
+			@apply font-normal;
+		}
+	}
+
+	.dropdown_icon {
+		@apply transition-all;
+	}
+}

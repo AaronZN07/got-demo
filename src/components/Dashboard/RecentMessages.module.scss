@@ -1,0 +1,18 @@
+.recent_messages {
+	h2 {
+		@apply font-bold;
+	}
+
+	.messages {
+		@apply mt-6;
+		@apply bg-white;
+		@apply p-5;
+		@apply shadow-md;
+		@apply rounded-2xl;
+		@apply transition-all;
+
+		&:hover {
+			@apply shadow-none;
+		}
+	}
+}

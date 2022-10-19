@@ -1,0 +1,73 @@
+@import '/src/assets/scss/base/variables';
+.label_error {
+	color: $danger;
+	@apply block;
+}
+
+.input_error {
+	border-color: $danger !important;
+}
+
+.file {
+	@apply block;
+	@apply w-full;
+	@apply max-w-full;
+	@apply py-2;
+
+	.file_button {
+		@apply w-full;
+		@apply py-2;
+		@apply text-white;
+		background-color: $primary;
+	}
+
+	.file_drag {
+		@apply mt-5;
+		border: 2px dashed $primary;
+		@apply relative;
+		@apply py-10;
+		@apply text-center;
+		@apply uppercase;
+
+		input[type='file'] {
+			@apply cursor-pointer;
+			@apply absolute;
+			@apply opacity-0;
+			@apply top-0;
+			@apply left-0;
+			@apply bottom-0;
+			@apply right-0;
+			@apply w-full;
+			@apply h-full;
+		}
+
+		@media (max-width: 640px) {
+			@apply hidden;
+		}
+
+		&:hover {
+			@apply text-white;
+			background-color: $primary;
+			border: 2px dashed $white;
+		}
+	}
+
+	.file_updated {
+		@apply text-white;
+		@apply uppercase;
+		@apply text-center;
+		@apply mt-5;
+		img {
+			@apply mx-auto;
+			@apply max-w-xs;
+			@apply max-h-64;
+		}
+
+		.file_remove {
+			@apply py-2;
+			@apply px-5;
+			background: $danger;
+			@apply mt-5;
+		}
+	}
+}

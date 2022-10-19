@@ -1,0 +1,30 @@
+.services {
+	@apply py-20;
+	@apply flex;
+	@apply flex-col;
+	@apply items-center;
+
+	.container {
+		margin-top: 2rem;
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+	}
+
+	a {
+		@apply mt-10;
+	}
+}
+
+.plans {
+	@apply py-20;
+
+	.container {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply mt-5;
+		@apply gap-5;
+
+		@apply md:grid-cols-2;
+		@apply lg:grid-cols-4;
+	}
+}

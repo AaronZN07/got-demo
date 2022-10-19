@@ -1,0 +1,22 @@
+@layer base {
+	html {
+		font-family: $font-family;
+	}
+
+	p {
+		@apply text-lg;
+	}
+
+	h1 {
+		@apply text-5xl;
+	}
+
+	h2 {
+		@apply text-2xl;
+	}
+
+	h3 {
+		@apply text-xl;
+		@apply font-bold;
+	}
+}

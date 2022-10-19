@@ -1,0 +1,50 @@
+@import '/src/assets/scss/base/variables';
+.style_select {
+	@apply grid;
+	@apply grid-cols-1;
+	@apply gap-5;
+	@apply text-center;
+	@apply p-5;
+	@apply border;
+	@apply rounded-lg;
+	@apply shadow-lg;
+
+	@apply md:gap-10;
+	@apply sm:grid-cols-2;
+	@apply md:grid-cols-3;
+}
+
+.item {
+	@apply border-2;
+	@apply rounded-lg;
+	@apply p-1;
+	@apply shadow-sm;
+	@apply select-none;
+	@apply cursor-pointer;
+	@apply transition;
+	@apply bg-white;
+	border-color: $secondary;
+
+	&:hover {
+		@apply scale-105;
+		@apply shadow-xl;
+	}
+}
+
+.item,
+.item .item_col {
+	@apply flex;
+	@apply flex-col;
+	@apply justify-center;
+	@apply items-center;
+}
+
+.item_row {
+	@apply flex;
+	@apply gap-2;
+}
+
+.item_grid_left {
+	@apply grid;
+	@apply grid-cols-2;
+}

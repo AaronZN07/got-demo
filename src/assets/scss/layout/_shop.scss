@@ -1,0 +1,94 @@
+.presentation-products {
+	@apply bg-image;
+	@apply bg-image-pets;
+	@apply p-5;
+	@apply md:p-20;
+
+	.container {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-5;
+		@apply sm:gap-10;
+
+		@apply sm:grid-cols-2;
+		@apply lg:grid-cols-4;
+	}
+}
+
+.shop {
+	@apply bg-image;
+	@apply bg-image-pets;
+}
+
+.product {
+	@apply container;
+	@apply mx-auto;
+	@apply py-5;
+
+	.product_detail {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply mt-5;
+		@apply gap-5;
+
+		@apply md:grid-cols-2;
+
+		.product_info {
+			.info_info {
+				@apply flex;
+				@apply flex-col;
+				@apply gap-2;
+				@apply mb-5;
+
+				h2 {
+					@apply text-3xl;
+				}
+
+				h3 {
+					@apply font-normal;
+				}
+
+				h3::before {
+					content: '₡';
+				}
+			}
+
+			.info_actions {
+				@apply my-5;
+				@apply flex;
+				@apply flex-col;
+				@apply items-center;
+				@apply gap-5;
+
+				@apply md:flex-row;
+			}
+
+			.info_share {
+				@apply flex;
+				@apply flex-col;
+				@apply gap-5;
+				@apply items-center;
+				@apply justify-center;
+
+				@apply sm:flex-row;
+				@apply md:justify-start;
+
+				.info_share-icons {
+					@apply flex;
+					@apply gap-3;
+
+					svg {
+						width: 50px;
+						path {
+							fill: gray;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.product_similar {
+	@apply py-5;
+}

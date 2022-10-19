@@ -1,0 +1,17 @@
+.thumbnail {
+	@apply flex;
+	@apply gap-5;
+	@apply my-5;
+	@apply justify-center;
+
+	.thumbnail_image {
+		@apply w-20;
+		@apply h-fit;
+		@apply opacity-50;
+		@apply cursor-pointer;
+	}
+
+	.thumbnail_image-active {
+		@apply opacity-100;
+	}
+}

@@ -1,0 +1,47 @@
+@import '/src/assets/scss/base/variables';
+
+.inputButton {
+	/* From uiverse.io by @alexruix */
+	display: flex;
+	align-items: center;
+	user-select: none;
+	max-width: 100%;
+
+	.input {
+		min-height: 50px;
+		max-width: 50%;
+		padding: 0 1rem;
+		color: #fff;
+		font-size: 15px;
+		border: 1px solid $secondary;
+		border-radius: 6px 0 0 6px;
+		background-color: transparent;
+	}
+
+	.button--submit {
+		min-height: 50px;
+		max-width: 50%;
+		padding: 0.5em 1em;
+		border: none;
+		border-radius: 0 6px 6px 0;
+		background-color: $secondary;
+		color: #fff;
+		font-size: 15px;
+		cursor: pointer;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	.button--submit:hover {
+		background-color: $details1;
+	}
+
+	.input:focus,
+	.input:focus-visible {
+		border-color: $details1;
+		outline: none;
+
+		.button--submit {
+			background-color: $details1;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@import '/src/assets/scss/base/variables';
+
+.tab_options {
+	@apply my-5;
+
+	.tab_list {
+		@apply flex;
+		@apply overflow-x-auto;
+
+		.tab_toggle {
+			@apply text-lg;
+			@apply p-5;
+			@apply relative;
+			@apply cursor-pointer;
+			@apply select-none;
+
+			&-active::after {
+				content: '';
+				@apply absolute;
+				@apply bottom-2;
+				@apply left-1/2;
+				transform: translateX(-50%);
+				@apply h-1;
+				@apply w-3/4;
+				background-color: $secondary;
+			}
+		}
+	}
+}
+
+.tab_container {
+	.tab_content {
+		@apply hidden;
+
+		&-active {
+			@apply block;
+		}
+	}
+}

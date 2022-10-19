@@ -1,0 +1,32 @@
+@import '/src/assets/scss/base/variables';
+@import '/src/assets/scss/base/utilities';
+
+.load_modal {
+	@apply text-center;
+}
+
+.data {
+	@apply border;
+	@apply rounded-md;
+	@apply my-5;
+	@apply max-h-56;
+	@apply overflow-y-auto;
+	@apply no_scroll;
+	@apply text-start;
+
+	.row {
+		@apply cursor-pointer;
+		@apply p-5;
+	}
+
+	.row_selected {
+		background-color: $primary;
+		@apply text-white;
+	}
+}
+
+.buttons {
+	@apply grid;
+	@apply grid-cols-2;
+	@apply gap-5;
+}

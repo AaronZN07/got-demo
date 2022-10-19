@@ -1,0 +1,38 @@
+@import '/src/assets/scss/base/variables';
+
+.banner {
+	background-color: $primary;
+	@apply p-10;
+	@apply text-white;
+	@apply uppercase;
+
+	.banner_container {
+		@apply container;
+		@apply mx-auto;
+		@apply flex;
+		@apply flex-col;
+		@apply gap-5;
+		@apply justify-between;
+		@apply items-center;
+		@apply text-center;
+
+		@apply md:flex-row;
+		@apply md:text-left;
+	}
+
+	h2 {
+		@apply text-4xl;
+	}
+
+	&-secondary {
+		background-color: $secondary;
+	}
+
+	&-details1 {
+		background-color: $details1;
+	}
+
+	&-details2 {
+		background-color: $details2;
+	}
+}

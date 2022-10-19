@@ -1,0 +1,39 @@
+@import '/src/assets/scss/base/variables';
+.input_login {
+	@apply mt-5;
+	@apply w-full;
+	@apply p-4;
+	@apply rounded-full;
+	@apply border-2;
+	@apply mx-auto;
+}
+
+.submit_login {
+	@apply text-white;
+	@apply text-xl;
+	@apply w-full;
+	@apply p-4;
+	background-color: $primary !important;
+	@apply rounded-full;
+}
+
+.forgot_login {
+	@apply mb-5;
+	@apply ml-2;
+	@apply w-full;
+	@apply text-sm;
+}
+
+.signin_login {
+	@apply text-center;
+	@apply mt-2;
+	@apply w-full;
+
+	p {
+		@apply text-sm;
+
+		a {
+			@apply font-bold;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+.login_container {
+	@apply flex;
+	@apply items-center;
+	@apply justify-center;
+	@apply container;
+	@apply mx-auto;
+}
+
+.login_desktop {
+	@apply text-black;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@apply py-10;
+	@apply px-20;
+	@apply shadow-lg;
+	@apply bg-white;
+	@apply rounded-2xl;
+
+	.login_header {
+		@apply flex;
+		@apply flex-col;
+		@apply justify-center;
+		@apply items-center;
+		img {
+			@apply mb-5;
+		}
+
+		h1,
+		p {
+			width: 100%;
+		}
+	}
+}
+
+.login_mobile {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@apply container;
+	@apply mx-auto;
+	@apply text-white;
+
+	.login_header {
+		@apply flex;
+		@apply flex-col;
+		@apply justify-center;
+		@apply items-center;
+
+		img {
+			@apply mb-5;
+		}
+	}
+
+	.login_back {
+		@apply text-center;
+		@apply my-5;
+	}
+}

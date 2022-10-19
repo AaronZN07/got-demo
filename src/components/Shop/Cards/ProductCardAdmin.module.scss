@@ -1,0 +1,14 @@
+.product_card {
+	@apply border;
+
+	.card_body {
+		@apply p-3;
+		.body_actions {
+			@apply mt-2;
+			@apply flex;
+			@apply flex-col;
+			@apply gap-5;
+			@apply justify-between;
+		}
+	}
+}

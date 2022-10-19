@@ -1,0 +1,61 @@
+@import '/src/assets/scss/base/variables';
+.message_admin {
+	@apply py-5;
+
+	.messages_container {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply py-5;
+		@apply gap-10;
+
+		@apply md:grid-cols-4;
+
+		.messages {
+			@apply flex;
+			@apply flex-col;
+			@apply gap-10;
+			@apply col-span-1;
+			@apply md:col-span-3;
+		}
+
+		.filter {
+			@apply flex;
+			@apply flex-col;
+			@apply gap-5;
+			.search {
+				@apply w-full;
+				input {
+					@apply w-full;
+					@apply px-4;
+					@apply py-4;
+					@apply rounded-lg;
+				}
+			}
+
+			.filt_messages {
+				@apply flex;
+				@apply flex-col;
+				@apply gap-5;
+				.filt_button {
+					@apply border-2;
+					border-color: $primary;
+					@apply rounded-lg;
+					@apply w-full;
+					@apply p-5;
+					@apply flex;
+					@apply items-center;
+					@apply gap-3;
+				}
+
+				.active_button {
+					background-color: $primary;
+					color: $details2;
+				}
+			}
+		}
+	}
+
+	.pagination {
+		@apply mx-auto;
+	}
+}

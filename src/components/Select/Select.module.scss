@@ -1,0 +1,77 @@
+@import '/src/assets/scss/base/variables';
+@import '/src/assets/scss/base/utilities';
+
+.select_box {
+	@apply flex;
+	@apply flex-col;
+	@apply w-full;
+	@apply text-white;
+	@apply select-none;
+
+	.selected {
+		background-color: $primary;
+		@apply rounded-lg;
+		@apply mb-2;
+		@apply relative;
+
+		.icon {
+			@apply absolute;
+			@apply right-5;
+			@apply top-1/2;
+			@apply -translate-y-1/2;
+
+			svg {
+				transition: all 0.15s ease-in;
+			}
+		}
+	}
+
+	.option_container {
+		background-color: $primary;
+		@apply max-h-0;
+		@apply w-full;
+		@apply opacity-0;
+		transition: all 0.15s ease-in;
+		@apply rounded-lg;
+		@apply overflow-hidden;
+
+		&.active {
+			@apply scroll_minimalist;
+			@apply max-h-52;
+			@apply opacity-100;
+			@apply overflow-y-auto;
+		}
+	}
+
+	.option,
+	.selected {
+		@apply cursor-pointer;
+		@apply py-3;
+		@apply px-6;
+	}
+
+	.option {
+		.radio {
+			@apply hidden;
+		}
+
+		&:hover {
+			background-color: lighten($color: $primary, $amount: 05%);
+		}
+	}
+}
+
+.collection_selected {
+	@apply flex;
+	@apply gap-5;
+	@apply w-11/12;
+	@apply flex-wrap;
+
+	.item_selected {
+		@apply w-fit;
+		background-color: $secondary;
+		@apply py-2;
+		@apply px-3;
+		@apply rounded-full;
+	}
+}

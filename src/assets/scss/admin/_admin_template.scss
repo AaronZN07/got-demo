@@ -1,0 +1,38 @@
+.admin_page {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	@apply bg-gray-100;
+}
+
+.admin_content {
+	transition: all 0.3s ease-in;
+	&.admin_open {
+		@apply ml-0;
+		@media (min-width: 1024px) {
+			margin-left: 280px;
+		}
+	}
+
+	&.admin_close {
+		@apply ml-0;
+		@media (min-width: 1024px) {
+			margin-left: 64px;
+		}
+	}
+
+	.admin_outlet {
+		@apply p-5;
+		@apply py-0;
+	}
+}
+
+.admin_backdrop {
+	@apply fixed;
+	@apply top-0;
+	@apply left-0;
+	@apply w-full;
+	@apply h-full;
+	@apply cursor-pointer;
+	@apply z-40;
+}

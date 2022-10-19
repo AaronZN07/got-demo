@@ -1,0 +1,21 @@
+@import '/src/assets/scss/base/variables';
+.save_modal {
+	@apply text-center;
+
+	input {
+		@apply border;
+		@apply w-full;
+		@apply rounded-md;
+		@apply border-black;
+		@apply my-5;
+		@apply py-1;
+		@apply px-3;
+	}
+
+	span {
+		@apply -mt-5;
+		@apply mb-5;
+		@apply block;
+		color: $danger;
+	}
+}

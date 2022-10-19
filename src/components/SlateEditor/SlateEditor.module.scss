@@ -1,0 +1,84 @@
+.editor {
+	@apply max-w-full;
+	@apply border;
+	@apply border-black;
+
+	.editor_text {
+		@apply p-5;
+	}
+}
+
+.color_button,
+.toolbar {
+	@apply flex;
+}
+
+.toolbar {
+	@apply items-center;
+	@apply border-b-2;
+	@apply bg-gray-100;
+	@apply flex-wrap;
+	@apply overflow-y-auto;
+	@apply flex-col;
+	@apply sm:flex-row;
+
+	.toolbar_item {
+		@apply px-5;
+		@apply py-3;
+	}
+
+	.mark_active,
+	.block_active {
+		img {
+			filter: invert(0%);
+		}
+	}
+
+	.mark_inactive,
+	.block_inactive {
+		img {
+			filter: invert(80%);
+		}
+	}
+}
+
+.color_button {
+	@apply flex-col;
+	@apply justify-center;
+	@apply relative;
+	@apply gap-1;
+
+	img,
+	input {
+		@apply cursor-pointer;
+	}
+
+	input[type='color'] {
+		@apply absolute;
+		@apply bottom-1;
+		@apply left-1/2;
+		transform: translateX(-50%);
+		-webkit-appearance: none;
+		border: none;
+		height: 3px;
+		@apply w-1/2;
+	}
+	input[type='color']::-webkit-color-swatch-wrapper {
+		padding: 0;
+	}
+	input[type='color']::-webkit-color-swatch {
+		border: none;
+	}
+}
+
+.block_buttons {
+	@apply border-x;
+	@apply border-t;
+	@apply flex;
+	@apply px-2;
+	@apply w-full;
+	@apply items-center;
+	@apply justify-center;
+
+	@apply sm:w-auto;
+}

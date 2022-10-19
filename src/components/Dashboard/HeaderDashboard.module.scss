@@ -1,0 +1,120 @@
+@import '/src/assets/scss/base/variables';
+
+.content_header {
+	@apply text-white;
+}
+
+.header_page {
+	@apply px-5;
+	@apply py-5;
+	@apply flex;
+	@apply flex-col;
+	@apply items-center;
+	@apply text-black;
+	color: $primary;
+	@apply font-bold;
+
+	@apply md:px-10;
+	@apply md:flex-row;
+
+	.header_breadcrumb {
+		.breadcrumb_icon {
+			@apply transition-all;
+
+			&:hover {
+				color: lighten($color: $primary, $amount: 20%);
+			}
+		}
+
+		.breacrumb_route:hover {
+			@apply underline;
+		}
+
+		@apply flex;
+		@apply items-center;
+		@apply gap-2;
+		@apply ml-5;
+	}
+}
+
+.header_user {
+	background-color: $primary;
+	@apply py-5;
+	@apply px-5;
+	@apply flex;
+	@apply justify-center;
+	@apply gap-5;
+	@apply items-center;
+
+	@apply sm:justify-between;
+
+	svg {
+		@apply text-xl;
+	}
+
+	.user_options {
+		@apply flex;
+		@apply gap-10;
+		@apply transition-all;
+
+		.icon_navegation {
+			@apply block;
+			@apply lg:hidden;
+		}
+
+		.icon_search {
+			@apply block;
+			@apply sm:hidden;
+		}
+	}
+
+	.header_search {
+		@apply relative;
+
+		@apply transition-all;
+
+		input {
+			@apply w-full;
+			@apply sm:w-auto;
+		}
+
+		.close_search {
+			@apply block;
+			@apply absolute;
+			top: 12px;
+			right: 10px;
+
+			@apply sm:hidden;
+		}
+
+		@media (max-width: 640px) {
+			transform: translateX(-150%);
+			@apply hidden;
+			@apply w-full;
+		}
+
+		.search {
+			@apply bg-transparent;
+			@apply border-2;
+			@apply rounded-lg;
+			@apply px-4;
+			@apply py-2;
+
+			&:focus {
+				@apply outline-none;
+				border-color: $secondary;
+			}
+		}
+	}
+
+	&.search_responsive {
+		.header_search {
+			@apply block;
+			transform: translateX(0);
+		}
+
+		.user_options {
+			@apply hidden;
+		}
+	}
+}

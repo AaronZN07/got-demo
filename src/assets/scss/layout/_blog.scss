@@ -1,0 +1,22 @@
+.recent_news {
+	@apply py-20;
+
+	.container {
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-5;
+		@apply mt-5;
+
+		@apply md:grid-cols-3;
+	}
+}
+
+.blog {
+	@apply container;
+	@apply mx-auto;
+	@apply py-10;
+	@apply mt-10;
+}

@@ -1,0 +1,74 @@
+.like-button {
+	input {
+		display: none;
+
+		&:checked + label svg {
+			@apply fill-red-400;
+			@apply stroke-red-400;
+			animation: shakeFav 1.5s ease-in-out 0s 1 normal none;
+		}
+	}
+
+	label {
+		display: flex;
+		align-items: flex-end;
+		user-select: none;
+		cursor: pointer;
+		width: auto;
+		max-width: fit-content;
+		padding: 0.5rem 1rem;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		@apply shadow-md;
+
+		span {
+			transition: all 0.5s;
+			margin-left: 10px;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+
+		svg,
+		path {
+			transition: all 0.2s;
+		}
+
+		&:hover {
+			span {
+				@apply text-red-400;
+			}
+
+			svg {
+				@apply text-red-400;
+			}
+		}
+	}
+}
+
+@keyframes shakeFav {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}

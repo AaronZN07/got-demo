@@ -1,0 +1,6 @@
+@import '/src/assets/scss/base/utilities';
+
+.article {
+	@apply bg-image;
+	@apply bg-image-lines;
+}

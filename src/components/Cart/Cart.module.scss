@@ -1,0 +1,75 @@
+.cart {
+	@apply mt-5;
+	@apply w-full;
+	@apply max-w-full;
+	@apply border;
+
+	thead {
+		@apply bg-gray-200;
+
+		th {
+			@apply text-center;
+			@apply p-7;
+			@apply uppercase;
+		}
+	}
+
+	tbody {
+		td {
+			@apply p-5;
+			@apply border-r;
+			@apply border-b;
+			@apply border-r-gray-200;
+			@apply border-b-gray-200;
+		}
+	}
+
+	tfoot {
+		@apply bg-gray-200;
+		td {
+			@apply p-7;
+		}
+	}
+}
+
+.remove {
+	@apply text-center;
+	span {
+		@apply cursor-pointer;
+		width: 30px;
+		height: 30px;
+
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+.image {
+	display: flex;
+	justify-content: center;
+	img {
+		width: 250px;
+		height: 150px;
+		margin: 0 auto;
+	}
+}
+
+.description {
+	span {
+		display: block;
+		&:first-child {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.total_price,
+.unit_price {
+	text-align: center;
+
+	&::before {
+		content: '₡';
+	}
+}

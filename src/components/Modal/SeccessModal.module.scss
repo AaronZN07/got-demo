@@ -1,0 +1,11 @@
+@import '/src/assets/scss/base/variables';
+.succes_modal {
+	@apply text-center;
+	.hero_succes {
+		background-color: $succes;
+	}
+
+	.button_success {
+		background-color: $succes;
+	}
+}

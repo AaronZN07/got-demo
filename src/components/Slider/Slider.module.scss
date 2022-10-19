@@ -1,0 +1,24 @@
+.slider {
+	@apply flex;
+	@apply flex-col;
+
+	.slider_values {
+		@apply flex;
+		@apply items-center;
+		@apply justify-center;
+
+		h4 {
+			@apply text-2xl;
+			@apply font-normal;
+
+			&::before {
+				content: '₡';
+			}
+		}
+
+		.separator {
+			@apply text-3xl;
+			@apply mx-3;
+		}
+	}
+}

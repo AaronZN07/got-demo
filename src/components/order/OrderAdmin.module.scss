@@ -1,0 +1,7 @@
+.order_admin {
+	.order_pending {
+		@apply grid;
+		@apply grid-cols-3;
+		@apply gap-10;
+	}
+}

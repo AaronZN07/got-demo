@@ -1,0 +1,14 @@
+.get_appointment {
+	@apply bg-image;
+	@apply bg-image-dogs;
+	@apply p-20;
+	@apply md:p-40;
+	@apply text-white;
+	@apply flex;
+	@apply flex-col;
+	@apply items-center;
+
+	a {
+		@apply mt-10;
+	}
+}

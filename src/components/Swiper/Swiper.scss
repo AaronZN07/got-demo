@@ -1,0 +1,32 @@
+@import '/src/assets/scss/base/variables';
+.custom-wrapper {
+	.splide__slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.splide__arrows {
+	.splide__arrow svg {
+		fill: $secondary;
+
+		&:hover {
+			fill: darken($color: $secondary, $amount: 15%);
+		}
+	}
+}
+
+.splide__pagination {
+	button.is-active {
+		background-color: $secondary;
+	}
+
+	button {
+		background-color: $primary;
+
+		&:hover {
+			background-color: $secondary;
+		}
+	}
+}

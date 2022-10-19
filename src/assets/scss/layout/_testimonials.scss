@@ -1,0 +1,14 @@
+.testimonials {
+	@apply pt-10;
+	@apply pb-0;
+	@apply bg-image;
+	@apply bg-image-cats;
+
+	@apply md:pb-10;
+	@apply md:pt-20;
+
+	.container {
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+	}
+}

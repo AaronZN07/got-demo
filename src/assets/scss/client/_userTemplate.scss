@@ -1,0 +1,38 @@
+html {
+	height: 100%;
+}
+
+.client_template {
+	background-image: linear-gradient(-20deg, $details2 0%, $primary 100%);
+	background: conic-gradient(
+		from 80deg at 0% 85%,
+		rgb(57, 81, 118),
+		rgb(30, 52, 86)
+	);
+	width: 100%;
+	@apply text-white;
+}
+
+.client_header {
+	@apply container;
+	@apply mx-auto;
+	@apply py-5;
+	@apply flex-col;
+	@apply justify-between;
+	@apply items-center;
+	@apply hidden;
+
+	@apply md:flex-row;
+	@apply md:flex;
+
+	.client_nav {
+		ul {
+			@apply flex;
+			@apply flex-col;
+			@apply gap-5;
+			@apply text-lg;
+
+			@apply sm:flex-row;
+		}
+	}
+}

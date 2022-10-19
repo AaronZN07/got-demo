@@ -1,0 +1,40 @@
+.title {
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding-bottom: 1.5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+
+.sub1 {
+	background-image: url(/src/assets/img/icons/separator.png);
+}
+
+.sub2 {
+	background-image: url(/src/assets/img/icons/separator-white.png);
+}
+
+.sub3 {
+	color: #fff;
+	text-align: left;
+	background-position: left bottom;
+	background-image: url(/src/assets/img/icons/separator-left-white.png);
+}
+
+.sub4 {
+	text-align: left;
+	background-image: url(/src/assets/img/icons/separator-left.png);
+	background-position: left bottom;
+}
+
+.subtitle {
+	margin-top: 1rem;
+	text-align: center;
+
+	&_1 {
+		text-align: left;
+	}
+}

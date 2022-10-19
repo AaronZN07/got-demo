@@ -1,0 +1,80 @@
+@import '/src/assets/scss/base/variables';
+
+.card_open {
+	width: 100%;
+	height: 120px;
+	transition: all 0.5s;
+	box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+		-15px -15px 30px rgba(60, 60, 60, 0.082);
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+.card_open:hover {
+	height: 254px;
+	background: linear-gradient(360deg, $primary 60%, $primary 70%);
+}
+
+.card_open .header {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: $white;
+	margin-bottom: 16px;
+}
+
+.card_open .header .img_box {
+	width: 50px;
+
+	svg {
+		height: 50px;
+		width: 50px;
+	}
+}
+
+.card_open .header .title {
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 4px 0 14px 0;
+	transition: all 0.5s;
+	color: $dark;
+}
+
+.card_open:hover .header {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+
+.card_open:hover .card_open .header .title {
+	padding: 0;
+}
+
+.card_open .content {
+	display: block;
+	text-align: justify;
+	color: $white;
+	margin: 0 18px;
+}
+
+.card_open .content p {
+	transition: all 0.5s;
+	font-size: 1em;
+	margin-bottom: 8px;
+}
+
+.card_open .content a {
+	color: #1d8122;
+	cursor: pointer;
+	transition: all 0.5s;
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.card_open .content .btn-link:hover {
+	border-bottom: 1px solid #1d8122;
+}

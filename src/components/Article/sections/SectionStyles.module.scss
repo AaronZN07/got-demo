@@ -1,0 +1,109 @@
+// Estilos Globales
+.section {
+	@apply my-5;
+
+	img {
+		@apply max-w-full;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+}
+
+// Estilos 1, 4, 5
+.section_title-image,
+.section_full,
+.section_full-reverse,
+.section_title-text,
+.section_image-text,
+.section_image,
+.section_text {
+	@apply flex;
+	@apply flex-col;
+	@apply gap-5;
+}
+
+// Estitlos 2 y 3
+.section_title-image_left,
+.section_title-image_right,
+.section_full-right,
+.section_full-left {
+	@apply grid;
+	@apply grid-cols-1;
+	@apply gap-5;
+
+	@apply md:grid-cols-3;
+}
+
+// Estitlos 2
+.section_title-image_right {
+	.title {
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+		@apply text-center;
+	}
+
+	.image {
+		@apply col-span-2;
+	}
+}
+
+// Estitlos 3
+.section_title-image_left {
+	.title {
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+		@apply text-center;
+
+		@apply md:col-start-3;
+		@apply md:row-start-1;
+	}
+
+	.image {
+		@apply md:col-span-2;
+		@apply md:col-start-1;
+	}
+}
+
+//Estilos 4
+.section_full-reverse {
+	.title {
+		@apply order-1;
+	}
+
+	.content {
+		@apply order-3;
+	}
+
+	.image {
+		@apply order-2;
+	}
+}
+
+.section_full-right {
+	.title {
+		@apply md:col-span-3;
+	}
+
+	.content {
+		@apply md:col-span-2;
+	}
+}
+
+.section_full-left {
+	.title {
+		@apply md:col-span-3;
+	}
+	.content {
+		@apply col-span-2;
+		@apply md:col-start-2;
+		@apply md:row-start-2;
+	}
+
+	.image {
+		@apply md:col-start-1;
+	}
+}

@@ -1,0 +1,112 @@
+@import '/src/assets/scss/base/variables';
+.shop {
+	@apply grid;
+	@apply grid-cols-1;
+	@apply gap-0;
+
+	@apply lg:grid-cols-4;
+	@apply lg:gap-10;
+}
+
+.shop_content {
+	@apply col-span-3;
+	@apply flex;
+	@apply flex-col;
+	@apply justify-between;
+
+	h3 {
+		@apply my-10;
+	}
+
+	.pagination_shop {
+		@apply my-10;
+		@apply mx-auto;
+	}
+
+	.content_products {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-10;
+
+		@apply md:grid-cols-2;
+		@apply lg:grid-cols-3;
+	}
+}
+
+.filter_bar {
+	@apply flex;
+	@apply flex-col;
+	@apply gap-10;
+	@apply container;
+	@apply mx-auto;
+	@apply mb-10;
+
+	.react_collapse {
+		transition: height 500ms;
+	}
+
+	.collapse {
+		@apply flex;
+		@apply flex-col;
+		@apply gap-10;
+	}
+
+	.filter_title {
+		@apply text-white;
+		@apply text-center;
+		@apply p-4;
+		@apply uppercase;
+
+		h3 {
+			@apply select-none;
+		}
+	}
+
+	.filter_search,
+	.filter_products,
+	.filter_price {
+		@apply flex;
+		@apply flex-col;
+		@apply gap-5;
+	}
+
+	.filter_collapse {
+		background-color: $primary;
+		@apply cursor-pointer;
+		@apply block;
+		@apply lg:hidden;
+	}
+
+	.filter_products {
+		.products_title {
+			background-color: $details1;
+		}
+
+		ul {
+			@apply flex;
+			@apply flex-col;
+			@apply gap-5;
+			li {
+				@apply p-1;
+				@apply border-b;
+
+				label {
+					@apply text-lg;
+					@apply ml-5;
+
+					span {
+						@apply float-right;
+					}
+				}
+			}
+		}
+	}
+
+	.search_title {
+		background-color: $secondary;
+	}
+
+	.price_title {
+		background-color: $details2;
+	}
+}

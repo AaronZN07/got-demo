@@ -1,0 +1,44 @@
+@import '/src/assets/scss/base/variables';
+.form_contact {
+	@apply grid;
+	@apply grid-cols-1;
+	@apply mt-5;
+	@apply gap-5;
+
+	@apply md:grid-cols-3;
+
+	input[type='text'],
+	input[type='email'],
+	input[type='tel'],
+	textarea {
+		@apply w-full;
+		@apply border-2;
+		@apply p-3;
+		@apply border-black;
+		@apply rounded-xl;
+
+		&:focus {
+			outline: none;
+			@apply border-2;
+			border-color: $secondary;
+		}
+	}
+
+	.subject,
+	.message {
+		@apply col-span-1;
+		@apply md:col-span-3;
+	}
+
+	.submit {
+		background-color: $secondary;
+		@apply text-white;
+		@apply rounded-full;
+		@apply cursor-pointer;
+		@apply py-3;
+		@apply px-2;
+
+		@apply col-start-1;
+		@apply md:col-start-2;
+	}
+}

@@ -1,0 +1,12 @@
+.counter_input {
+	@apply flex;
+	@apply gap-3;
+	@apply items-center;
+	@apply justify-center;
+
+	button {
+		@apply bg-slate-200;
+		@apply rounded-lg;
+		@apply p-1;
+	}
+}

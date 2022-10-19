@@ -1,0 +1,143 @@
+.card_plan {
+	display: flex;
+	flex-direction: column;
+
+	.card_plan_header {
+		.card_plan-level {
+			@apply rounded-t-md;
+			@apply border;
+			@apply text-white;
+			@apply uppercase;
+			@apply font-bold;
+			@apply text-center;
+			@apply p-5;
+		}
+		.card_plan-price {
+			@apply py-10;
+			@apply text-white;
+			@apply uppercase;
+			@apply font-bold;
+			@apply text-center;
+
+			h2 {
+				&::before {
+					content: '₡';
+				}
+
+				&::after {
+					content: '/mes';
+					@apply text-lg;
+				}
+
+				@apply text-5xl;
+			}
+		}
+	}
+
+	.card_plan_body {
+		@apply border;
+		@apply rounded-b-md;
+		@apply p-5;
+		@apply uppercase;
+		@apply font-bold;
+		@apply text-center;
+		p {
+			@apply my-5;
+		}
+
+		.card_plan-contact {
+			@apply py-3;
+			@apply w-full;
+			@apply rounded-lg;
+			@apply text-white;
+		}
+	}
+
+	&.red {
+		$color: rgb(248 113 113 / 1);
+		.card_plan-level {
+			background-color: $color;
+			border-color: $color;
+		}
+
+		.card_plan-price {
+			background-color: $color;
+			opacity: 0.5;
+			background: linear-gradient(135deg, #00000055 25%, transparent 25%) -25px 0/
+					50px 50px,
+				linear-gradient(225deg, #000000 25%, transparent 25%) -25px 0/ 50px 50px,
+				linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 50px 50px,
+				linear-gradient(45deg, #000000 25%, $color 25%) 0px 0/ 50px 50px;
+		}
+
+		.card_plan-contact {
+			background-color: $color;
+		}
+	}
+
+	&.blue {
+		$color: rgb(59 130 246 / 1);
+		.card_plan-level {
+			background-color: $color;
+			border-color: $color;
+		}
+
+		.card_plan-price {
+			background-color: $color;
+			opacity: 0.5;
+			background: linear-gradient(135deg, #00000055 25%, transparent 25%) -25px 0/
+					50px 50px,
+				linear-gradient(225deg, #000000 25%, transparent 25%) -25px 0/ 50px 50px,
+				linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 50px 50px,
+				linear-gradient(45deg, #000000 25%, $color 25%) 0px 0/ 50px 50px;
+		}
+
+		.card_plan-contact {
+			background-color: $color;
+		}
+	}
+
+	&.green {
+		$color: rgb(34 197 94 / 1);
+		.card_plan-level {
+			background-color: $color;
+			border-color: $color;
+		}
+
+		.card_plan-price {
+			background-color: $color;
+			opacity: 0.5;
+			background: linear-gradient(135deg, #00000055 25%, transparent 25%) -25px 0/
+					50px 50px,
+				linear-gradient(225deg, #000000 25%, transparent 25%) -25px 0/ 50px 50px,
+				linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 50px 50px,
+				linear-gradient(45deg, #000000 25%, $color 25%) 0px 0/ 50px 50px;
+		}
+
+		.card_plan-contact {
+			background-color: $color;
+		}
+	}
+
+	&.yellow {
+		$color: rgb(234 179 8 / 1);
+		.card_plan-level {
+			background-color: $color;
+			border-color: $color;
+		}
+
+		.card_plan-price {
+			background-color: $color;
+			opacity: 0.5;
+			background: linear-gradient(135deg, #00000055 25%, transparent 25%) -25px 0/
+					50px 50px,
+				linear-gradient(225deg, #000000 25%, transparent 25%) -25px 0/ 50px 50px,
+				linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 50px 50px,
+				linear-gradient(45deg, #000000 25%, $color 25%) 0px 0/ 50px 50px;
+		}
+
+		.card_plan-contact {
+			background-color: $color;
+		}
+	}
+}

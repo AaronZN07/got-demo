@@ -1,0 +1,97 @@
+@import '/src/assets/scss/base/variables';
+.modal {
+	@apply fixed;
+	@apply z-50;
+	@apply top-0;
+	@apply left-0;
+	@apply w-full;
+	@apply min-h-screen;
+	@apply justify-center;
+	@apply items-center;
+	@apply z-50;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	backdrop-filter: blur(4px);
+
+	&.is_open {
+		@apply flex;
+	}
+
+	&.is_close {
+		@apply hidden;
+	}
+
+	.modal_container {
+		animation: myAnim 0.5s ease 0s 1 normal forwards;
+		@apply rounded-xl;
+		@apply relative;
+		@apply bg-white;
+		@apply shadow-lg;
+		@apply overflow-y-auto;
+		@apply h-auto;
+		@apply w-64;
+		@apply sm:w-96;
+		@apply border;
+
+		&.padding {
+			@apply px-8;
+			@apply py-8;
+			@apply sm:px-12;
+
+			.close_modal {
+				@apply text-black;
+			}
+		}
+
+		.close_modal {
+			@apply text-white;
+			@apply absolute;
+			@apply right-4;
+			@apply top-4;
+			@apply px-1;
+			@apply rounded-full;
+		}
+
+		.hero {
+			@apply px-12;
+			@apply py-10;
+
+			.icon {
+				@apply text-white;
+				@apply text-7xl;
+
+				svg {
+					@apply w-auto;
+				}
+			}
+		}
+
+		.message {
+			@apply my-7;
+
+			.p {
+				@apply text-sm;
+			}
+		}
+
+		.button_close {
+			@apply mb-5;
+			@apply text-white;
+
+			button {
+				@apply px-5;
+				@apply py-3;
+				@apply rounded-full;
+			}
+		}
+	}
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

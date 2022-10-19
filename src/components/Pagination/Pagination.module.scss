@@ -1,0 +1,45 @@
+@import '/src/assets/scss/base/variables';
+
+.pagination {
+	@apply border;
+	@apply w-fit;
+	@apply h-fit;
+	@apply rounded-3xl;
+	@apply bg-white;
+	@apply shadow-md;
+}
+
+.pagination_content {
+	@apply flex;
+
+	li {
+		@apply py-4;
+		@apply px-7;
+
+		&:hover {
+			background-color: $secondary;
+			border-bottom: 3px solid $primary;
+			margin-bottom: -3px;
+			@apply text-white;
+		}
+	}
+
+	a {
+		.prev_pagination {
+			@apply rounded-tl-3xl;
+			@apply rounded-bl-3xl;
+		}
+
+		.next_pagination {
+			@apply rounded-tr-3xl;
+			@apply rounded-br-3xl;
+		}
+	}
+
+	.active {
+		background-color: $secondary;
+		border-bottom: 3px solid $primary;
+		margin-bottom: -3px;
+		@apply text-white;
+	}
+}

@@ -1,0 +1,71 @@
+.about-header {
+	@apply py-20;
+	@apply bg-gray-200;
+
+	&_decoration {
+		display: block;
+		width: 100px;
+		height: 4px;
+		margin-bottom: 1rem;
+		background-color: $primary;
+	}
+
+	&_text {
+		@apply font-normal;
+	}
+}
+
+.about-us {
+	@apply pb-10;
+
+	.container {
+		@apply grid;
+		@apply grid-cols-1;
+		@apply xl:grid-cols-2;
+	}
+	.about-image {
+		margin: -3rem auto 0;
+		max-height: 400px;
+		width: auto;
+		max-width: 650px;
+		@apply shadow-2xl;
+		@apply shadow-gray-500;
+	}
+
+	.about-us-info {
+		@apply mt-10;
+		.about-text {
+			@apply leading-10;
+		}
+	}
+}
+
+.why-choose-us {
+	@apply py-20;
+
+	.container {
+		@apply mt-5;
+		@apply grid;
+		@apply grid-cols-1;
+		@apply gap-5;
+
+		@apply md:grid-cols-2;
+		@apply lg:grid-cols-4;
+	}
+}
+
+.meet-team {
+	@apply bg-image;
+	@apply bg-image-pets;
+	@apply py-20;
+
+	.container {
+		@apply mt-7;
+
+		.card {
+			@apply flex;
+			@apply flex-col;
+			@apply justify-center;
+		}
+	}
+}

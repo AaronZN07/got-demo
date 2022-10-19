@@ -1,0 +1,12 @@
+@import '/src/assets/scss/base/variables';
+.search_input {
+	@apply p-3;
+	@apply rounded-3xl;
+	@apply border-2;
+	@apply w-full;
+
+	&:focus {
+		@apply outline-0;
+		border-color: $secondary;
+	}
+}

@@ -1,0 +1,35 @@
+@import '/src/assets/scss/base/variables';
+.product_create {
+	@apply flex;
+	@apply flex-col;
+	@apply justify-center;
+	@apply py-5;
+	@apply my-2;
+	@apply w-full;
+	@apply mx-auto;
+	@apply max-w-7xl;
+}
+
+.input_container {
+	@apply border;
+	@apply border-black;
+	@apply p-2;
+	@apply flex;
+	@apply flex-col;
+
+	input[type='text'],
+	input[type='email'],
+	input[type='tel'],
+	textarea {
+		@apply w-full;
+		@apply border-2;
+		@apply p-3;
+		@apply border-black;
+
+		&:focus {
+			outline: none;
+			@apply border-2;
+			border-color: $secondary;
+		}
+	}
+}
